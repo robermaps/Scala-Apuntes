@@ -25,3 +25,11 @@ cadena.toUpperCase.foreach(println)
                                  // R
                                  // T
                                  // O
+
+// String interpolation - Llamar a variables dentro de cadenas
+val cadena = "Roberto"
+val edad = 26 
+
+print(s"Me llamo $cadena y tengo $edad años")                          // Me llamo Roberto y tengo 26 años
+print(s"Me llamo $cadena y el año que viene tendré ${edad + 1}")       // Me llamo Roberto y el año que viene tendré 27
+
