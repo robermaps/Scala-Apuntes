@@ -1,9 +1,9 @@
-// Los rangos pueden guardarse como objetos de tipo Range
+// Los rangos pueden guardarse como objetos de tipo Collection
 
 // Rango con enteros
 val ent = 1 to 10
 
-// Rango con valores 'char'
+// Rango con valores char (comillas simples)
 val minus = 'a' to 'z' 
 
 // Rangos sin incluir el último valor
@@ -23,5 +23,3 @@ for (x <- minus){print(x)}  //abcdefghijklmnopqrstuvwxyz
 for (x <- ent2){print(x)}  //123456789
 for (x <- ent3){print(x + " ")}  //0 5 10 15 20 25
 for (x <- minus3){print(x + " ")}  //a d g j m p s v y 
-
-
