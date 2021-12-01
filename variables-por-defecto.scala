@@ -1,7 +1,7 @@
 // Se pueden crear variables MUTABLES sin darles un valor
 // Scala puede asignar valores predeterminados según del tipo de dato indicado
 
-val x:String =_     // error
+val x:String =_     // error (solo con var)
 
 var x:String =_     // null
 var u:Char = _      // \u0000 (null character)
