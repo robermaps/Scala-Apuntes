@@ -16,3 +16,12 @@ cadena.last                      // o
 cadena.toLowerCase               // roberto
 cadena.toUpperCase               // ROBERTO
 
+// Iterar sobre los caracteres
+cadena.toUpperCase.foreach(println)
+                                 // R
+                                 // O
+                                 // B
+                                 // E
+                                 // R
+                                 // T
+                                 // O
