@@ -10,5 +10,5 @@ do {print(x) ; x = x + 1} while (x < 10)  //123456789
 for (z <- 1 to 5) {print("Hola" + z + " ")}  //Hola1 Hola2 Hola3 Hola4 Hola5 
 
 // Bucle for con condiciones if (solo números pares)
-for (z <- 0 to 20 if z%2==0) {print(z)}  //02468101214161820
+for (z <- 0 to 20 if z%2==0) print(z)  //02468101214161820
 
