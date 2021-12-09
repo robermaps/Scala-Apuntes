@@ -35,3 +35,13 @@ lista6 = lista6:+"geografía"    // List(geo, geo, geo, geo, geografía)
 lista6 = 55+:lista6             // ERROR - type mismatch
 lista6 = "geografía"+:lista6    // List(geografía, geo, geo, geo, geo, geografía)
 
+// Unir listas
+lista1:::lista2   // List("montaña", "río", "pantano", 24, 76, 200) - Cambia a tipo List[Any] al combinar enteros con cadenas
+
+// Anidar listas
+lista1::lista2    // List(List("montaña", "río", "pantano"), 24, 76, 200) - List[Any]
+
+
+
+
+
