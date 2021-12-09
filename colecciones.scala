@@ -29,7 +29,7 @@ for (z <- lista1) println(z)   // montaña
                                // pantano
                                // río
 
-// Modificar listas 
+// Modificar listas - Al ser de tipo inmutable hay que 'rehacerlas'
 lista2 = lista2:+55             // ERROR - reassignment to val
 lista6 = lista6:+"geografía"    // List(geo, geo, geo, geo, geografía) 
 lista6 = 55+:lista6             // ERROR - type mismatch
@@ -42,6 +42,13 @@ lista1:::lista2   // List("montaña", "río", "pantano", 24, 76, 200) - Cambia a
 lista1::lista2    // List(List("montaña", "río", "pantano"), 24, 76, 200) - List[Any]
 
 
+// LIST BUFFER - scala.collection.mutable - Pueden modificarse directamente
+import scala.collection.mutable.ListBuffer
+val lista7 = ListBuffer( 1, 2, 3, 4, 5, 6)
 
+lista7 += 7          // ListBuffer( 1, 2, 3, 4, 5, 6, 7)
+lista7.append(8)     // ListBuffer( 1, 2, 3, 4, 5, 6, 7, 8)
 
+// Modificar una posición concreta
+lista7(4) = 24       // ListBuffer( 1, 2, 3, 4, 24, 6, 7, 8)
 
