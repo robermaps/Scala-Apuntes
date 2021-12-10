@@ -48,6 +48,7 @@ lista1::lista2       // List(List("montaña", "río", "pantano"), 24, 76, 200) -
 // Comparar listas
 lista1 == lista2     // false
 
+
 //** LIST BUFFER
 //** Pueden modificarse directamente
 import scala.collection.mutable.ListBuffer
@@ -102,6 +103,63 @@ print(array6)                         // Array(11, 12, 13, 1, 2, 16, 17)
 // Concatenar arrays
 Array.concat(array5, array6)          // Array(1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 16, 17)
 
+
 //** ARRAY BUFFER 
-//**  
+//** Permite cambiar el tamaño del array (mutable)
+import scala.collection.mutable.ArrayBuffer
+var arrayb1 = ArrayBuffer(20, 30, 40)
+
+// Añadir un valor al final
+arrayb1 += 50                     // ArrayBuffer(20, 30, 40, 50)
+
+// Añadir una lista 
+arrayb1 ++= List(60, 70, 80)      // ArrayBuffer(20, 30, 40, 50, 60, 70, 80)
+
+// Borrar un elemento
+arrayb1 -= 60                     // ArrayBuffer(20, 30, 40, 50, 70, 80)
+
+// Borrar varios elementos
+arrayb1 --= List(70, 80)          // ArrayBuffer(20, 30, 40, 50)
+
+
+//** SET
+//** No se puede repetir ningún valor. Por defecto son immutable.
+var set1 = Set("Madrid", "Soria", "Jaén")        // scala.collection.immutable.Set[String] = Set(Madrid, Soria, Jaén)
+var set2 = Set(1, 2, 3)                          // scala.collection.immutable.Set[Int] = Set(1, 2, 3)
+
+// Comprobar si existe un elemento en el set
+set1("Madrid")      // val res1: Boolean = true
+set1("Lleida")      // val res2: Boolean = false
+
+// Añadir elementos al set
+set1 += "Álava"     // Set("Madrid", "Soria", "Jaén", "Álava")                 
+
+// Unir sets
+set3 = set1++set2   // scala.collection.immutable.Set[Any] = HashSet(1, Jaén, 2, 3, Madrid, Soria, Álava)
+
+// Borrar un elemento
+set1 - "Soria"      // Set("Madrid", "Jaén")  
+
+
+//** MAPS
+//** Conjunto de elementos con clave-valor
+var map1 = Map((1, "Argentina"), (2, "Perú"), (3, "Colombia"))          // scala.collection.immutable.Map[Int,String] = Map(1 -> Argentina, 2 -> Perú, 3 -> Colombia)
+var map2 = Map('a' -> "Bosque" , 'b' -> "Desierto", 'c' -> "Lago")      // scala.collection.immutable.Map[Char,String] = Map(a -> Bosque, b -> Desierto, c -> Lago)
+
+// Acceder a los valores a través de la clave
+map1(3)    // Colombia
+map2('b')  // Desierto
+
+// Añadir un elemento al map en una nueva variable
+map1 + (4 -> "Chile")          // val res1: Map(1 -> Argentina, 2 -> Perú, 3 -> Colombia, 4 -> Chile) - no se modifica el map
+map2 + (('d', "Marisma"))      // val res2: Map(a -> Bosque, b -> Desierto, c -> Lago, d -> Marisma)
+  
+// Modificar un map - al ser de tipo inmutable hay que 'rehacerlas'
+print(map1)                     // Map(1 -> Argentina, 2 -> Perú, 3 -> Colombia)
+map1 = map1 + (4 -> "Chile")    // mutated map1
+print(map1)                     // Map(1 -> Argentina, 2 -> Perú, 3 -> Colombia, 4 -> Chile)
+
+map1 = map1 - 4    // mutated map1
+print(map1)        // Map(1 -> Argentina, 2 -> Perú, 3 -> Colombia)        
+
 
