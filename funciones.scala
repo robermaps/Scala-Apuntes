@@ -30,3 +30,32 @@ def presentacion(nombre: String, edad: Int, mayusculas: Boolean)=
 }
 
 presentacion("Roberto", 26, true)     // ME LLAMO ROBERTO Y TENGO 26 AÑOS
+presentacion(edad = 26, mayusculas = true, nombre = "Roberto")  // Mismo resultado. Se permite alterar el orden si se indica el nombre del argumento
+
+// Calculadora - © Apasoft Training 
+// Con valores por defecto
+def calcular(operacion:String, numero1: Int = 1, numero2: Int = 1)=
+      {
+       if (numero2==0) {
+            "No se puede dividir por 0"
+      }
+      else
+      {
+      operacion match {
+         case "+" => numero1+numero2
+         case "-" => numero1-numero2
+         case "*" => numero1*numero2
+         case "/" => numero1/numero1
+         case _ => "Operacion Incorrecta"
+      }
+      }
+      }
+
+calcular("-", 30, 10)        // 20
+calcular("+", 20)            // 21
+calcular("+", numero2 = 5)   // 6
+
+
+
+
+
