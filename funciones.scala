@@ -55,6 +55,33 @@ calcular("-", 30, 10)        // 20
 calcular("+", 20)            // 21
 calcular("+", numero2 = 5)   // 6
 
+// Argumentos variables - © Apasoft Training 
+def calcularMuchos(operacion:String, numeros: Int*) =             // El argumento numeros puede tener varias entradas
+      {
+       if (numeros.length<2) {
+            "No se puede calcular con solo un número"
+      }
+      else
+      {
+      var total:Double=0
+      if (operacion=="+" || operacion=="-")  total=0 else  total=1   // Evitar el valor 0 en multiplicaciones y divisiones
+     
+      operacion match {
+         case "+" => {numeros.foreach(x=>total=total+x)       // El valor de cada número se guarda en x y la variable total se va actualizando sumándole ese valor
+                      total}
+         case "-" => {numeros.foreach(x=>total=total-x)
+		      total
+			}
+         case "*" => {numeros.foreach(x=>total=total*x)
+		      total}
+         case "/" => {numeros.foreach(x=>total=total/x)
+                      total}
+         case _ => "Operacion Incorrecta"
+      }
+      }
+      }
+
+calcularMuchos("+", 1, 2, 3)    // val res1: Any = 6.0
 
 
 
