@@ -17,3 +17,11 @@ val lista1 = List("montaña", "río", "pantano")
 for (z <- lista1) println(z)   // montaña
                                // pantano
                                // río
+
+// Bucle para iterar sobre una lista
+var x = 0
+var resultado = 0
+var numeros = List(1, 2, 3, 4, 5, 6, 7, 8)
+
+numeros.foreach(x=>total=total+x)
+print(resultado)                     // 36
