@@ -6,15 +6,24 @@
 // - target -> Donde se guardarán los resultados del proyecto
 // - src -> Código fuente. Tiene dos carpetas: /main (código fuente) y /test y cada una con una carpeta /scala
 
-// Para construir aplicaciones en scala tendremos que crear un paquete (package) en la carpeta src/main/scala
-// Después tendremos que crear dentro de ese package el primer objeto (New/Scala class/Object) que será el que ejecute la aplicación. 
-// Puede ser de dos tipos:
+// Para construir aplicaciones en scala tendremos que crear un paquete (package) en la carpeta src/main/scala (el de ejemplo se llamará prueba1)
+// Después tendremos que crear dentro de ese package el primer object (New/Scala class/Object) que será el que ejecute la aplicación. 
+// Se puede hacer de dos maneras:
 
-// 1 - Objeto que con extends App hará ejecutable el código de su interior al darle a ▶ Run
+// 1 - Objeto que con extends App (trait) 
 package prueba1
 
 object hola extends App {
   println("Hola Mundo")
 }
 
-// 2 - 
+// 2 - Con una función main dentro de nuestro object
+package prueba1
+
+object hola {
+  def main(args: Array[String]): Unit =  
+    println("Hola Mundo")
+}
+
+
+
