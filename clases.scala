@@ -1,5 +1,5 @@
-// Crear una clase
-class Ciudad(nombre: String, altitud: Int, superficiekm2: Float) {        // Constructor -> Parámetros obligatorios para crear la clase (private properties)
+// Crear una clase PRINCIPAL
+class Ciudad(nombre: String, altitud: Int, superficiekm2: Float) {        // Constructor - OPCIONAL -> Parámetros obligatorios para crear la clase (private properties) 
   
   def resumen(): Unit =                                                   // Método de clase
     println("Nombre: " + nombre)
@@ -25,4 +25,11 @@ print(ciudad1.getClass)   // class package.Ciudad - se supone que hemos creado e
 ciudad1.poblacion = 3223000
 print(ciudad1.poblacion)      // 3223000
 
-
+// Crear una clase HIJA
+class Barrio extends Ciudad {                      // La nueva clase Barrio tomará los métodos y variables de Ciudad 
+  var postal =  _
+  
+  def resumenBarrio(): Unit =
+    resumen()
+    println(postal)
+}
