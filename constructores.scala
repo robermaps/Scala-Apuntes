@@ -23,7 +23,7 @@ object hola {
   def main(args: Array[String]): Unit = {
     
     var ciudad1 = new Ciudad("Córdoba", 200)                // La ciudad Córdoba ha sido creada (CONSTRUCTOR PRINCIPAL - el valor de presupuesto y de ratio será 0)
-    var ciudad2 = new Ciudad("Segovia", 200, 50000)         // La ciudad Segovia ha sido creada (CONSTRUCTOR SECUNDARIO)
+    var ciudad2 = new Ciudad("Segovia", 200, 50000)         // La ciudad Segovia ha sido creada (CONSTRUCTOR AUXILIAR)
    
     ciudad1.resumen()                                       // La ciudad Córdoba cuenta con 200 clientes y tiene un presupuesto de 0 
                                                             // El ratio presupuesto/cliente para Córdoba es de 0   
