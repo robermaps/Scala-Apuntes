@@ -36,7 +36,7 @@ trait trait2 {
 }
 
 trait trait3 {
-  var altitud: Integer = _
+  var altitud: Int = _
   def Imprimir3(): Unit = {
     println(s"Tiene una altitud de $altitud metros")
   }
