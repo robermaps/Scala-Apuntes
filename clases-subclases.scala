@@ -1,13 +1,16 @@
 //** Crear una clase PRINCIPAL **\\
-class Ciudad(nombre: String, altitud: Int, var superficiekm2: Double) {    // Constructor - OPCIONAL -> Parámetros obligatorios para crear la clase. 
-                                                                           // Son por defecto Private salvo que vayan precedidos de un var o val, que pasarían a ser Public
+class Ciudad(nombre: String, altitud: Int, val superficiekm2: Double) {    // Constructor - OPCIONAL -> Parámetros obligatorios para inicializar la clase. 
+                                                                           // Son por defecto Private salvo que vayan precedidos de un var o val, que pasarían a ser Public    
   
-  def resumen(): Unit = {                                                  // Método de clase
+  def resumen(): Unit = {                                                  // Método de clase. Se inicializará cuando sea llamada a través de un objeto de esta clase.
     println("Nombre: " + nombre)
     println("Altitud: " + altitud)
     println("Superficie: " + superficiekm2)
   }
-                                                                           // Variables de clase
+  
+  println("Ciudad creada")                                                 // Todo lo que no esté en una función forma parte del constructor y se inicializará al crear la clase
+  
+                                                                           // Variables de clase - también se inicializan al crear la clase
   var poblacion:Int = _                                                    // Public -> puede accederse desde cualquier lado
   private var recaudacion:Double = _                                       // Private -> solo puede accederse a través de la clase y sus subclases
   protected var gasto:Double = _                                           // Protected -> solo se puede acceder a través de la clase (al igual que los parámetros)
@@ -15,12 +18,15 @@ class Ciudad(nombre: String, altitud: Int, var superficiekm2: Double) {    // Co
 }
 
 // Crear un objeto de la clase Ciudad
-var ciudad1 = new Ciudad("Madrid", 660, 604.3)
-
+var ciudad1 = new Ciudad("Madrid", 660, 604.3)      // Ciudad creada 
+                               
 // Usar el método resumen()
 ciudad1.resumen()  // Altitud: 650
                    // Superficie: 604.5
                    // Nombre: Madrid
+
+// Acceder a un parámetro público del constructor
+println(ciudad1.superficiekm2)    // 604.5 - Está definido en la creación de la clase con un val
 
 // Ver la clase del objeto ciudad1 a través de un método público
 print(ciudad1.getClass)       // class package.Ciudad - se supone que hemos creado esta clase en un package dentro de nuestro proyecto
