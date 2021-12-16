@@ -1,13 +1,16 @@
 //** Crear una clase PRINCIPAL **\\
-class Ciudad(nombre: String, altitud: Int, superficiekm2: Double) {        // Constructor - OPCIONAL -> Parámetros obligatorios para crear la clase (private properties) 
+class Ciudad(nombre: String, altitud: Int, var superficiekm2: Double) {    // Constructor - OPCIONAL -> Parámetros obligatorios para crear la clase. 
+                                                                           // Son por defecto Private salvo que vayan precedidos de un var o val, que pasarían a ser Public
   
   def resumen(): Unit = {                                                  // Método de clase
     println("Nombre: " + nombre)
     println("Altitud: " + altitud)
     println("Superficie: " + superficiekm2)
   }
-  
-  var poblacion:Int = _                                                    // Variable de la clase (public property)
+                                                                           // Variables de clase
+  var poblacion:Int = _                                                    // Public -> puede accederse desde cualquier lado
+  private var recaudacion:Double = _                                       // Private -> solo puede accederse a través de la clase y sus subclases
+  protected var gasto:Double = _                                           // Protected -> solo se puede acceder a través de la clase (al igual que los parámetros)
   
 }
 
@@ -57,3 +60,5 @@ barrio1.poblacion = 8277      // Variable heredada
 
 // Método exclusivo de la subclase
 barrio1.resumenBarrio()       // El barrio Albaicín tiene el código postal 18010 y una población de 8277 habitantes
+
+
