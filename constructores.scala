@@ -11,7 +11,7 @@ class Ciudad(nombre: String, clientes: Int) {               // Este es el CONSTR
     this.ratio = presupuesto / clientes                           // Calcular un nuevo valor para añadirlo al constructor principal
   }
 
-  def resumen(): Unit ={
+  def resumen(): Unit ={                                                                                   // Método de clase
     println(s"La ciudad $nombre cuenta con $clientes clientes y tiene un presupuesto de $presupuesto")
     println(s"El ratio presupuesto/cliente para madrid es de $ratio")
   }
