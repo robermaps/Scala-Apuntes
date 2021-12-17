@@ -8,7 +8,7 @@ class Ciudad(nombre: String, clientes: Int) {               // Este es el CONSTR
   private var ratio:Int = _             
 
   def this(nombre: String, clientes: Int, presupuesto: Int) {     // Este es el CONSTRUCTOR AUXILIAR
-    this(nombre: String, clientes: Int)                           // Invocar al constructor principal - OBLIGATORIO
+    this(nombre: String, clientes: Int)                           // Invocar al constructor principal - OBLIGATORIO invocar siempre a un constructor anterior
     this.presupuesto = presupuesto                                // Resolver el nuevo argumento para que pase al constructor principal y que tenga efecto
     this.ratio = presupuesto / clientes                           // Calcular un nuevo valor para añadirlo al constructor principal
   }
@@ -54,7 +54,7 @@ class Ciudad {                                        // CONSTRUCTOR PRINCIPAL S
   
   def this(clientes: Int, presupuesto: Int) {         // CONSTRUCTOR AUXILIAR 2
     this()                                            // Referencia al constructor principal. 
-                                                      // SI SE QUISIESE PODRÍA REFERENCIARSE AL OTRO CONSTRUCTOR AUXILIAR PARA INICIARLO TAMBIÉN PERO DEBEN COINCIDIR LOS PARÁMETROS
+                                                      // SI SE QUISIESE PODRÍA REFERENCIARSE AL OTRO CONSTRUCTOR AUXILIAR PARA INICIARLO TAMBIÉN, PERO DEBEN COINCIDIR LOS PARÁMETROS
     this.clientes = clientes                              
     this.presupuesto = presupuesto
   }  
