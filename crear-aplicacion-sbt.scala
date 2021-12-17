@@ -7,7 +7,7 @@
 // - src -> Código fuente. Tiene dos carpetas: /main (código fuente) y /test y cada una con una carpeta /scala
 
 // Para construir aplicaciones en scala tendremos que crear un paquete (package) en la carpeta src/main/scala (el de ejemplo se llamará prueba1)
-// Después tendremos que crear dentro de ese package un object (New/Scala class/Object) que será el que ejecute la aplicación. 
+// Después tendremos que crear dentro de ese package un object (New/Scala class/Object) que servirá como entrada para ejecutar la aplicación. 
 // Se puede hacer de dos maneras:
 
 // 1 - Objeto con extends App (trait) 
