@@ -2,7 +2,7 @@
 // Se crean como objetos singleton y se asocian a una clase que posea el mismo nombre
 // Deben estar en el mismo fichero que la clase principal
 
-// Clase
+// Clase principal
 class parcela(superficie:Double, valor:Int, tipo:String) {
   
   def resumen():Unit = {
@@ -26,7 +26,7 @@ class parcela(superficie:Double, valor:Int, tipo:String) {
 }
 
 
-// Companion object para predefinir el parámetro 'tipo'
+// Companion object para predefinir el parámetro 'tipo' de la clase principal
 // Debe tener el mismo nombre que la clase anterior
 object parcela {
   val tipo_rural = "RURAL"                                                      // Variables estáticas
