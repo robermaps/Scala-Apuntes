@@ -1,5 +1,6 @@
 // Los companion objects son métodos y properties estáticas
 // Se crean como objetos singleton y se asocian a una clase que posea el mismo nombre
+// Deben estar en el mismo fichero que la clase principal
 
 // Clase
 class parcela(superficie:Double, valor:Int, tipo:String) {
