@@ -1,4 +1,5 @@
 // Se pueden realizar instancias sin NEW definiendo un método apply dentro de un companion object
+// Trabajar con clases y companion objects mejora la legibilidad del código
 // Ejemplo:
 
 // Clase principal
