@@ -9,3 +9,8 @@ caraocruz(5)     // Cruz
                  // Cara
                  // Cruz
                  // Cruz
+
+// Ejemplo 3 © Apasoft Training
+val lista1 = List.range(1,10)
+val par = (num:Int) => num%2==0
+println(lista1.filter(par))
