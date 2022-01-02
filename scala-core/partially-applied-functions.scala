@@ -8,4 +8,3 @@ val x = calcular(1,2, _:Int)                                   // Introduzco los
 println(x(5))                                                  // La variable x es una función que tomará los parámetros ya establecidos (1 y 2) y completará la función 
                                                                // con el parámetro que falte (5). Esta línea imprimirá el valor entero 8 (1 + 2 + 5)
 
-// Ejemplo 2
