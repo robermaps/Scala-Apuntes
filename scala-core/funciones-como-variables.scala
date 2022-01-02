@@ -16,9 +16,9 @@ val lista1 = List.range(1,10)
 val par = (num:Int) => num%2==0
 println(lista1.filter(par))
 
-// Ejemplo 4 - Números aleatorios entre 0 y el número pasado como parámetro
+// Ejemplo 4 - Números aleatorios entre 0 y el número pasado como parámetro (
 import scala.math.random
 def randomulti = {(x:Int) => (x*random).round}
-val aleatorio = randomulti
+val aleatorio = randomulti           // La variable devuelve una función, no un valor
 println(aleatorio(100))    // 58
 println(aleatorio(45))     // 33
