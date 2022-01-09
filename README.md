@@ -28,3 +28,4 @@ Basados en el curso <a href="https://www.udemy.com/course/scala-desde-cero/">Sca
 * <a href="https://github.com/roberer/Scala-Apuntes/blob/main/scala-core/funciones-como-parametro.scala">Funciones como parámetro</a>
 * <a href="https://github.com/roberer/Scala-Apuntes/blob/main/scala-core/funciones-como-variables.scala">Funciones como variables</a>
 * <a href="https://github.com/roberer/Scala-Apuntes/blob/main/scala-core/partially-applied-functions.scala">Partially applied functions</a>
+* <a href="https://github.com/roberer/Scala-Apuntes/blob/main/scala-core/currying-functions.scala">Currying functions</a>
